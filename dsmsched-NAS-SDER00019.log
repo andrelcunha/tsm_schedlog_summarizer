@@ -84,7 +84,7 @@ Successful incremental backup of '/appdata/mtmradar/pir/.Trash-18484/*'
 
 Total number of objects inspected:            3
 Total number of objects backed up:            0
-Total number of objects updated:              0
+Total number of objects updated:              1
 Total number of objects rebound:              0
 Total number of objects deleted:              0
 Total number of objects expired:              0
@@ -118,7 +118,7 @@ Successful incremental backup of '/appdata/mtmradar/pir/.Trash-359307/*'
 
 Total number of objects inspected:            4
 Total number of objects backed up:            0
-Total number of objects updated:              0
+Total number of objects updated:              1
 Total number of objects rebound:              0
 Total number of objects deleted:              0
 Total number of objects expired:              0
@@ -1415,7 +1415,7 @@ Total number of bytes transferred:       202.62 MB
 Data transfer time:                        2.85 sec
 Network data transfer rate:           72,736.61 KB/sec
 Aggregate data transfer rate:          1,085.55 KB/sec
-Objects compressed by:                        0%
+Objects compressed by:                        10%
 Total data reduction ratio:               99.88%
 Elapsed processing time:               00:03:11
 IBM Tivoli Storage Manager
@@ -28870,7 +28870,7 @@ Total number of objects encrypted:            0
 Total number of objects grew:                 0
 Total number of retries:                      0
 Total number of bytes inspected:         116.76 MB
-Total number of bytes transferred:            0  B
+Total number of bytes transferred:            1  GB
 Data transfer time:                        0.00 sec
 Network data transfer rate:                0.00 KB/sec
 Aggregate data transfer rate:              0.00 KB/sec
@@ -29407,7 +29407,7 @@ Total number of objects inspected:        5,933
 Total number of objects backed up:            0
 Total number of objects updated:              0
 Total number of objects rebound:              0
-Total number of objects deleted:              0
+Total number of objects deleted:              1
 Total number of objects expired:              0
 Total number of objects failed:               0
 Total number of objects encrypted:            0
@@ -29441,7 +29441,7 @@ Total number of objects inspected:          925
 Total number of objects backed up:            0
 Total number of objects updated:              0
 Total number of objects rebound:              0
-Total number of objects deleted:              0
+Total number of objects deleted:              1
 Total number of objects expired:              0
 Total number of objects failed:               0
 Total number of objects encrypted:            0
@@ -29475,7 +29475,7 @@ Total number of objects inspected:        7,972
 Total number of objects backed up:            0
 Total number of objects updated:              0
 Total number of objects rebound:              0
-Total number of objects deleted:              0
+Total number of objects deleted:              1
 Total number of objects expired:              0
 Total number of objects failed:               0
 Total number of objects encrypted:            0
@@ -29922,7 +29922,7 @@ Total number of objects expired:              0
 Total number of objects failed:               0
 Total number of objects encrypted:            0
 Total number of objects grew:                 0
-Total number of retries:                      0
+Total number of retries:                      1
 Total number of bytes inspected:           2.79 GB
 Total number of bytes transferred:            0  B
 Data transfer time:                        0.00 sec
@@ -29956,7 +29956,7 @@ Total number of objects expired:              0
 Total number of objects failed:               0
 Total number of objects encrypted:            0
 Total number of objects grew:                 0
-Total number of retries:                      0
+Total number of retries:                      3
 Total number of bytes inspected:           2.79 GB
 Total number of bytes transferred:            0  B
 Data transfer time:                        0.00 sec
@@ -30055,7 +30055,7 @@ Successful incremental backup of '/appdata/mtmradar/ixd/AI_INDEXADAS/*'
 Total number of objects inspected:      558,536
 Total number of objects backed up:           15
 Total number of objects updated:              0
-Total number of objects rebound:              0
+Total number of objects rebound:              2
 Total number of objects deleted:              0
 Total number of objects expired:              0
 Total number of objects failed:               0
@@ -30089,7 +30089,7 @@ Successful incremental backup of '/appdata/mtmradar/pir/DER/radar_carregados/*'
 Total number of objects inspected:    1,112,568
 Total number of objects backed up:          349
 Total number of objects updated:              0
-Total number of objects rebound:              0
+Total number of objects rebound:              2
 Total number of objects deleted:              0
 Total number of objects expired:              0
 Total number of objects failed:               0
@@ -30125,7 +30125,7 @@ Total number of objects backed up:          153
 Total number of objects updated:              0
 Total number of objects rebound:              0
 Total number of objects deleted:              0
-Total number of objects expired:              0
+Total number of objects expired:              1
 Total number of objects failed:               0
 Total number of objects encrypted:            0
 Total number of objects grew:                 0
@@ -30159,7 +30159,7 @@ Total number of objects backed up:            0
 Total number of objects updated:              0
 Total number of objects rebound:              0
 Total number of objects deleted:              0
-Total number of objects expired:              0
+Total number of objects expired:              1
 Total number of objects failed:               0
 Total number of objects encrypted:            0
 Total number of objects grew:                 0
