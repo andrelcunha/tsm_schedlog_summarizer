@@ -18,7 +18,8 @@ DICT_TITLES = {
     'TOTAL_DATA_REDUCTION_RATIO': ['Total data reduction ratio', []],
     'ELAPSED_PROCESSING_TIME': ['Elapsed processing time', []],
 }
-DICT_BYTES = dict(B=1, KB=1000, MB=1000000, GB=1000000000)
+DICT_BYTES = dict(B=1, KB=1000, MB=1000000, GB=1000000000, TB=1000000000)
+BYTES = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB']
 
 
 def convert_str(str_value):
@@ -55,10 +56,9 @@ def sum_dict_value(d, key, value):
         tmp = 0
     d[key][1].append(tmp + value)
 
-
-def humanize_byte(value):
+'''
+def humanize_byte(value, unit='B'):
     result = value
-    unit = 'B'
     tmp = value / 1000
     if not tmp < 1:
         result = tmp
@@ -71,6 +71,27 @@ def humanize_byte(value):
             if not tmp < 1:
                 result = tmp
                 unit = 'GB'
+                if not tmp < 1:
+                    result = tmp
+                    unit = 'GB'
+    return result, unit
+'''
+
+
+def humanize_byte(value, unit='B'):
+    index = BYTES.index(unit)
+    tmp = value / 1000**index
+    print("tmp:{tmp}, index:{index}".format(tmp=tmp, index=index))
+    if tmp < 1:
+        index = index-1
+        result = value / 1000**index
+        unit = BYTES[index]
+    elif tmp >= 1000 and index < 7:
+        unit = BYTES[index+1]
+        print(unit)
+        return humanize_byte(value, unit)
+    else:
+        result = tmp
     return result, unit
 
 
