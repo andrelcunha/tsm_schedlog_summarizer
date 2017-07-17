@@ -21,12 +21,6 @@ DICT_TITLES = {
 DICT_BYTES = dict(B=1, KB=1000, MB=1000000, GB=1000000000)
 
 
-'''
-def remove_title_str(title, line):
-    return line.lstrip(LIST_TITLES.get(title)[0])
-'''
-
-
 def convert_str(str_value):
     return int(str_value.replace(',', ''))
 
@@ -38,9 +32,7 @@ def convert_byte_unit_2_byte_int(unit_value_str):
     :return: int
     """
     tmp_str = ' '.join(unit_value_str.split())
-    print('"'+tmp_str+'"')
     value, unit = unit_value_str.split()
-    #print('value:"{value}"\nunit:"{unit}"'.format(value=value, unit=unit))
     return int(float(value)*DICT_BYTES.get(unit))
 
 
@@ -101,7 +93,6 @@ def main(filename):
                         value = convert_str(raw_value)
                         sum_dict_value(DICT_TITLES, d_key, value)
                     elif title.find('bytes') > -1:
-                        # print('"'+raw_value+'"')
                         value += convert_byte_unit_2_byte_int(raw_value.strip().replace(',', ''))
                         sum_dict_value(DICT_TITLES, d_key, value)
                     elif title.find('Data') > -1:
@@ -117,28 +108,27 @@ def main(filename):
                     elif title.find('Elapsed') > -1:
                         value = time_str_2_secs_int(raw_value)
                         sum_dict_value(DICT_TITLES, d_key, value)
-                    # print("d_key:{d_key} - value:{value}".format(d_key=d_key, value=DICT_TITLES[d_key][1]))
     for d_key, d_value in DICT_TITLES.items():
         d_title = d_value[0]
         unit = ''
         if d_value[1].__len__().__eq__(1):
             value = d_value[1][0]
             if d_title.find('bytes') > -1:
-                print(value)
-                total, u = humanize_byte(value)
+                tmp, u = humanize_byte(value)
                 unit = ' '+u
-            if d_title.find('Elapsed') > -1:
-                # print(value)
+                total = "%.2f" % tmp
+            elif d_title.find('Elapsed') > -1:
                 hours, minutes, seconds = humanize_sec(value)
                 total = "{h}:{m}:{s}".format(h=hours, m=minutes, s=seconds)
+            elif d_title.find('Data transfer time') > -1:
+                total = "%.2f" % value
+                unit = ' secs'
             else:
                 total = value
         else:
-            # print(d_title)
-            # print(d_value[1])
-            # print(len(d_value[1]))
             try:
-                total = sum(d_value[1])/len(d_value[1])
+                tmp = sum(d_value[1])/len(d_value[1])
+                total = "%.2f" % tmp
             except ZeroDivisionError:
                 total = 0
             if d_title.find('rate') > -1:
